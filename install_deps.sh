@@ -21,9 +21,8 @@ sudo dnf install -y \
 aria2c https://raw.githubusercontent.com/TeamUltroid/Ultroid/main/requirements.txt -o /tmp/requirements.txt
 aria2c https://raw.githubusercontent.com/TeamUltroid/Ultroid/main/resources/startup/optional-requirements.txt -o /tmp/optional-requirements.txt
 
-pip3 install -r \
-    /tmp/requirements.txt \
-    /tmp/optional-requirements.txt
+pip3 install -r /tmp/requirements.txt
+pip3 install -r /tmp/optional-requirements.txt
 
 # Configure git
 git config --global user.name "Sushrut1101"
