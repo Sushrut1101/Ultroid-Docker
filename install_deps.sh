@@ -27,8 +27,9 @@ sudo pip3 install -r /tmp/optional-requirements.txt
 sudo pip3 install \
     jikanpy covid pyfiglet pyjokes \
     emoji quotefancy lyrics_extractor \
-    pokedex speech_recognition textblob \
-    speedtest shazamio wikipedia
+    pypokedex SpeechRecognition \
+    speedtest shazamio wikipedia \
+    textblob
 
 # Configure git
 git config --global user.name "Sushrut1101"
