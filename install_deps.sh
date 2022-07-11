@@ -5,8 +5,7 @@ sudo dnf install -y \
 	https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \
 	https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
-# Update
-sudo dnf -y update
+# dnf: Update and Upgrade
 sudo dnf -y upgrade
 
 # Install Required Packages
@@ -15,14 +14,14 @@ sudo dnf install -y \
     git curl wget htop \
     python3 python3-pip \
     tmux ag tmate aria2 \
-    jq
+    jq gcc python3-devel
 
 # Install pip packages needed for Ultroid
 aria2c https://raw.githubusercontent.com/TeamUltroid/Ultroid/main/requirements.txt -o /tmp/requirements.txt
 aria2c https://raw.githubusercontent.com/TeamUltroid/Ultroid/main/resources/startup/optional-requirements.txt -o /tmp/optional-requirements.txt
 
-pip3 install -r /tmp/requirements.txt
-pip3 install -r /tmp/optional-requirements.txt
+sudo pip3 install -r /tmp/requirements.txt
+sudo pip3 install -r /tmp/optional-requirements.txt
 
 # Configure git
 git config --global user.name "Sushrut1101"
