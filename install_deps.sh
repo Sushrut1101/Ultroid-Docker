@@ -23,6 +23,13 @@ aria2c https://raw.githubusercontent.com/TeamUltroid/Ultroid/main/resources/star
 sudo pip3 install -r /tmp/requirements.txt
 sudo pip3 install -r /tmp/optional-requirements.txt
 
+# Extra Modules (Needed)
+sudo pip3 install \
+    jikanpy covid pyfiglet pyjokes \
+    emoji quotefancy lyrics_extractor \
+    pokedex speech_recognition textblob \
+    speedtest shazamio wikipedia
+
 # Configure git
 git config --global user.name "Sushrut1101"
 git config --global user.email "guptasushrut@gmail.com"
