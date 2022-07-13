@@ -1,15 +1,15 @@
 #!/usr/bin/env bash
 
 # Enable RPM Fusion Repos
-sudo dnf install -y \
+dnf install -y \
 	https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \
 	https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
 # dnf: Update and Upgrade
-sudo dnf -y upgrade
+dnf -y upgrade
 
 # Install Required Packages
-sudo dnf install -y \
+dnf install -y \
     sudo nano vim bash \
     git curl wget htop \
     python3 python3-pip \
@@ -20,11 +20,11 @@ sudo dnf install -y \
 aria2c https://raw.githubusercontent.com/TeamUltroid/Ultroid/main/requirements.txt -o /tmp/requirements.txt
 aria2c https://raw.githubusercontent.com/TeamUltroid/Ultroid/main/resources/startup/optional-requirements.txt -o /tmp/optional-requirements.txt
 
-sudo pip3 install -r /tmp/requirements.txt
-sudo pip3 install -r /tmp/optional-requirements.txt
+pip3 install -r /tmp/requirements.txt
+pip3 install -r /tmp/optional-requirements.txt
 
 # Extra Modules (Needed)
-sudo pip3 install \
+pip3 install \
     jikanpy covid pyfiglet pyjokes \
     emoji quotefancy lyrics_extractor \
     pypokedex SpeechRecognition \
