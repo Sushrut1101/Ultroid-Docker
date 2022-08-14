@@ -24,11 +24,11 @@ dnf install -y \
     jq gcc python3-devel
 
 # Install pip packages needed for Ultroid
-aria2c https://raw.githubusercontent.com/TeamUltroid/Ultroid/main/requirements.txt -o /tmp/requirements.txt
-aria2c https://raw.githubusercontent.com/TeamUltroid/Ultroid/main/resources/startup/optional-requirements.txt -o /tmp/optional-requirements.txt
+wget https://raw.githubusercontent.com/TeamUltroid/Ultroid/main/requirements.txt -O /tmp/requirements.txt
+wget https://raw.githubusercontent.com/TeamUltroid/Ultroid/main/resources/startup/optional-requirements.txt -O /tmp/optional-requirements.txt
 
-pip3 install -r /tmp/requirements.txt
-pip3 install -r /tmp/optional-requirements.txt
+pip3 install -U -r /tmp/requirements.txt
+pip3 install -U -r /tmp/optional-requirements.txt
 
 # Extra Modules (Needed)
 pip3 install \
